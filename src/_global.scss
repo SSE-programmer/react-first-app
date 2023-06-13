@@ -36,3 +36,9 @@ li {
 $blue: #61dafb;
 $blue-dark: #282c34;
 $blue-semi-dark: #383c44;
+
+.page-center-block {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}

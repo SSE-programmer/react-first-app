@@ -1,0 +1,56 @@
+@import "../../global";
+
+.App_header {
+  background-color: $blue-dark;
+
+  .header_container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+
+    @media screen and (max-width: 1220px) {
+      padding: 10px;
+    }
+  }
+
+  .logo {
+    font-family: Montserrat-Black, sans-serif;
+    font-size: 36px;
+    user-select: none;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+
+    li a {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+
+      font-family: Montserrat-SemiBold, sans-serif;
+      text-decoration: none;
+      color: $blue;
+      white-space: nowrap;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: $blue;
+        transition: width .5s;
+      }
+
+      @media (hover: hover) {
+        &:hover:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

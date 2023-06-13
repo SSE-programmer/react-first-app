@@ -2,26 +2,18 @@ import logo from './logo.svg';
 import './App.scss';
 import './components/sse-button/sse-button.component';
 import SseButton from "./components/sse-button/sse-button.component";
+import SseHeader from "./components/sse-header/sse-header.component";
+import SseFooter from "./components/sse-footer/sse-footer.component";
 
 
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <ul>
-                    <li>My page</li>
-                    <li>Community</li>
-                    <li>Random joke</li>
-                    <li>About project</li>
-                </ul>
-            </header>
-            <main className="App-main">
-                Main
+            <SseHeader />
+            <main className="App-main page-center-block">
                 <SseButton/>
             </main>
-            <footer className="App-footer">
-                Footer
-            </footer>
+            <SseFooter />
         </div>
     );
 }
