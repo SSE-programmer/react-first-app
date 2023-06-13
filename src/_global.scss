@@ -1,0 +1,38 @@
+@import "fonts";
+
+* {
+  font-family: Montserrat-Regular, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+#root {
+  height: calc(100vh - 1px);
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+$blue: #61dafb;
+$blue-dark: #282c34;
+$blue-semi-dark: #383c44;
