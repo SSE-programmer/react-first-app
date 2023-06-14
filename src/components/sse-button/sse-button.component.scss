@@ -5,9 +5,9 @@
   font-weight: bold;
   color: $blue;
   background-color: $blue-dark;
-  padding: 15px;
+  padding: 10px;
   border: 2px solid $blue;
-  border-radius: 5px;
+  border-radius: $radius-small;
   cursor: pointer;
   transition: background-color .5s;
 

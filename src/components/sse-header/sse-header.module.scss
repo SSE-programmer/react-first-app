@@ -13,6 +13,10 @@
     @media screen and (max-width: 1220px) {
       padding: 10px;
     }
+
+    @media screen and (max-width: $mobile-initial-width) {
+      flex-direction: column;
+    }
   }
 
   .logo {
@@ -26,29 +30,49 @@
     flex-wrap: nowrap;
     gap: 15px;
 
-    li a {
-      display: flex;
-      flex-direction: column;
+    @media screen and (max-width: 470px) {
       gap: 5px;
-      cursor: pointer;
+      flex-direction: column;
+    }
 
-      font-family: Montserrat-SemiBold, sans-serif;
-      text-decoration: none;
-      color: $blue;
-      white-space: nowrap;
+    li {
+      a {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
 
-      &:after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 2px;
-        background-color: $blue;
-        transition: width .5s;
-      }
+        font-family: Montserrat-SemiBold, sans-serif;
+        text-decoration: none;
+        color: $blue;
+        white-space: nowrap;
 
-      @media (hover: hover) {
-        &:hover:after {
+        @media screen and (max-width: 470px) {
+          width: fit-content;
+        }
+
+        &.active {
+          color: white;
+        }
+
+        &.active:after {
+          background-color: white;
           width: 100%;
+        }
+
+        &:after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: $blue;
+          transition: width .5s;
+        }
+
+        @media (hover: hover) {
+          &:hover:after {
+            width: 100%;
+          }
         }
       }
     }

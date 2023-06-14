@@ -1,0 +1,12 @@
+@import "../../global";
+
+.avatar {
+  border-radius: $radius-small;
+  box-shadow: $shadow-basic;
+  cursor: pointer;
+  transition: .2s;
+
+  &:hover {
+    box-shadow: inset 2px 2px 5px 1px $blue, 4px 4px 15px 6px $blue-dark;
+  }
+}

@@ -25,6 +25,7 @@ body {
 
 #root {
   height: calc(100vh - 1px);
+  overflow: hidden;
 }
 
 ul,
@@ -33,9 +34,18 @@ li {
   list-style: none;
 }
 
+button {
+  display: block;
+}
+
 $blue: #61dafb;
 $blue-dark: #282c34;
 $blue-semi-dark: #383c44;
+
+$shadow-basic: inset 1px 1px 5px 1px $blue, 4px 4px 15px 5px $blue-dark;
+$radius-small: 5px;
+
+$mobile-initial-width: 720px;
 
 .page-center-block {
   max-width: 1200px;

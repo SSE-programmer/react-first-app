@@ -1,18 +1,22 @@
 import styles from './sse-header.module.scss'
+import {NavLink} from "react-router-dom";
 
 function SseHeader() {
     const links = [
-        {label: 'My page', url: ''},
-        {label: 'Community', url: ''},
-        {label: 'Random joke', url: ''},
-        {label: 'About project', url: ''},
+        {label: 'My page', url: '/my-page'},
+        {label: 'Community', url: '/community'},
+        {label: 'Random joke', url: '/random-joke'},
+        {label: 'About project', url: '/about-project'},
     ];
 
     const linksList = links.map((link, index) =>
         <li key={index}>
-            <a href={link.url}>
+            <NavLink
+                className={({isActive}) => isActive ? styles.active : null }
+                to={link.url}
+            >
                 {link.label}
-            </a>
+            </NavLink>
         </li>
     );
 

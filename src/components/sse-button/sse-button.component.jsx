@@ -1,9 +1,9 @@
 import './sse-button.component.scss'
 
-function SseButton() {
+function SseButton({children}) {
     return (
         <button className="button">
-            SSE button
+            {children}
         </button>
     )
 }
